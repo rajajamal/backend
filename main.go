@@ -15,7 +15,7 @@ func init() {
 	configs.Load()
 	configs.Db.AutoMigrate(
 		&models.Customer{},
-		// &models.Menu{},
+		&models.Menu{},
 		// &models.Order{},
 		// &models.OrderDetail{},
 	)
@@ -29,6 +29,7 @@ func main() {
 	})
 
 	(routes.Customer{}).RegisterRoutes(app)
+	(routes.Menu{}).RegisterRoutes(app)
 
 	app.Listen(fmt.Sprintf(":%d", configs.Env.AppPort))
 }

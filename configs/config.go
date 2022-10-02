@@ -35,6 +35,7 @@ func Load() {
 	// var err error
 
 	// dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", os.Getenv("DbUser"), os.Getenv("DbPassword"), os.Getenv("DbHost"), os.Getenv("DbPort"), os.Getenv("DbName"))
+
 	Env.Debug, _ = strconv.ParseBool(os.Getenv("APP_DEBUG"))
 	port, _ := strconv.Atoi(os.Getenv("DB_PORT"))
 	Env.AppPort, _ = strconv.Atoi(os.Getenv("APP_PORT"))

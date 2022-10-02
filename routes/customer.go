@@ -23,7 +23,7 @@ func (Customer) RegisterRoutes(router fiber.Router) {
 
 	customer := handlers.Customer{Service: customerService}
 
-	// router.Post("/customers", customer.Register)
+	router.Post("/customers", customer.Register)
 	router.Get("/customers/:id", customer.Get)
 	// router.Post("/customers/:id/reservation", customer.Reservation)
 }
